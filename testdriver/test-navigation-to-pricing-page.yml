@@ -1,0 +1,14 @@
+version: 4.0.69
+steps:
+  - prompt: Click on "Pricing" in the navigation menu.
+    commands:
+      - command: hover-text
+        text: Pricing
+        description: navigation menu item
+        action: click
+  - prompt: >-
+      Assert that the pricing page displays various plans and options.  # Use
+      the content of the file from the environment
+    commands:
+      - command: assert
+        expect: the pricing page displays various plans and options
