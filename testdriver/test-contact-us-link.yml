@@ -1,0 +1,14 @@
+version: 4.0.69
+steps:
+  - prompt: Click on "Contact Sales" link.
+    commands:
+      - command: hover-text
+        text: Contact Sales
+        description: link in the header
+        action: click
+  - prompt: >-
+      Assert that the Contact form or contact details page is displayed.  # Use
+      the content of the file from the environment
+    commands:
+      - command: assert
+        expect: the contact form is displayed
