@@ -1,0 +1,14 @@
+version: 4.0.69
+steps:
+  - prompt: Click on "Support" in the top bar.
+    commands:
+      - command: hover-text
+        text: SUPPORT
+        description: link in the top bar
+        action: click
+  - prompt: >-
+      Assert that the support or help center page is displayed.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the support or help center page is displayed
