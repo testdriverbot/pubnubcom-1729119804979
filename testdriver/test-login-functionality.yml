@@ -1,0 +1,14 @@
+version: 4.0.69
+steps:
+  - prompt: Click on "Login" in the top bar.
+    commands:
+      - command: hover-text
+        text: LOGIN
+        description: login link in the top bar
+        action: click
+  - prompt: >-
+      Assert that the login page with fields for username and password appears. 
+      # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: the login page with fields for username and password appears
