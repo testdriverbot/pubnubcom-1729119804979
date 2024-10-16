@@ -1,0 +1,14 @@
+version: 4.0.69
+steps:
+  - prompt: Verify the webpage loads successfully.
+    commands:
+      - command: wait-for-text
+        text: The complete real-time developer platform
+  - prompt: >-
+      Assert that the PubNub logo is visible.  # Use the content of the file
+      from the environment
+    commands:
+      - command: wait-for-text
+        text: PubNub
+      - command: assert
+        expect: the PubNub logo is visible
