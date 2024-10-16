@@ -1,0 +1,14 @@
+version: 4.0.69
+steps:
+  - prompt: Click on "Developers" in the navigation menu.
+    commands:
+      - command: hover-text
+        text: Developers
+        description: navigation menu item
+        action: click
+  - prompt: >-
+      Assert that developer resources or documentation page appears.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the page shows "PubNub for Developers"
